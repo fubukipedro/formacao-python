@@ -10,6 +10,5 @@ def aplicar(funcao, lista):
 def dobra(lista):
     return lista * 2
     
-
 resultado = aplicar(dobra, [1, 2, 3])
 print(resultado)
