@@ -1,4 +1,4 @@
-# Crie uma função **criar_multiplicador(n)** que retorne uma função que multiplica qualquer número por n.
+# Crie uma função criar_multiplicador(n) que retorne uma função que multiplica qualquer número por n.
 
 def criar_multiplicador(n):
 
