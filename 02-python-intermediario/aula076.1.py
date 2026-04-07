@@ -27,8 +27,8 @@ print(pessoa['nome'])
 
 print()
 
-for chave in pessoa:
-    print(chave, pessoa[chave]) 
+for chaves in pessoa:
+    print(chaves, pessoa[chaves]) 
 
 print()
 
