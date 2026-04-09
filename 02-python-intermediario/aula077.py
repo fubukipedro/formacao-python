@@ -24,35 +24,26 @@ for questao in perguntas:
     opcoes = questao['Opções']
     for i, opcao in enumerate(opcoes):
         print(f'{i})', opcao)
-
+    
     escolha = input('Escolha uma opção: ')
     escolha_int = None
     quantidade_opcoes = len(opcoes)
+    quantidade_questoes = len(perguntas)
     acertou = False
 
-    if escolha.isdigit():
+    if escolha.isdigit(): # .isdigit() em Python é usado para verificar se todos os caracteres em uma string são dígitos numéricos
         escolha_int = int(escolha)
-    
+
     if escolha_int is not None:
         if escolha_int >= 0 and escolha_int < quantidade_opcoes:
             if opcoes[escolha_int] == questao['Resposta']:
                 acertou = True
-    
-    print()
-    print(f'Você digitou: {escolha_int}) {opcoes[escolha_int]}')
-    for i, alternativas in enumerate(opcoes):
-        if alternativas == questao['Resposta']:
-            alternativa = i
-            resposta = alternativas
-    print(f'Alternativa correta: {alternativa}) {resposta}')
+                quantidade_acertos += 1
     
     if acertou:
-        print('Parabéns! Você acertou 👍')
-        quantidade_acertos += 1
+            print('Acertou 👍')
     else:
-        print('Que pena, Você errou ❌')
-    print()
-    print('------------------------------------------------------------------')
+            print('Errou ❌')
     print()
 
-print(f'Você acertou {quantidade_acertos} de {len(perguntas)} perguntas.')
+print(f'Você acertou {quantidade_acertos} de {quantidade_questoes} perguntas.')
